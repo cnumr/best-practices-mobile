@@ -58,7 +58,18 @@ problem, or that there might be a better way of writing the code. Therefore, the
  Disable Obfuscation | The Proguard tool secure the app for production, including shrinking, code optimization and obfuscation. However, obfuscated code will have a sligthly negative impact on power consumption at runtime. To disable it, in `build.gradle`, replace the setting `minifyEnabled true` by this custom rule: `postprocessing { obfuscate false }` 
 
 ## 🤝 Social Code Smells
-
+ Name | Detailed Description
+---|---
+ *Privacy*
+ Crashlytics automatic opt-in | By default, Crashlytics automatically collects error reports for all application users. In order to let the choice to the users, disable the automatic data collection. It means adding a meta-data in the manifest with the attributes `android:name="firebase_crashlytics_collection_enabled"` and `android:value="false"`. From the source code, you may have the call `FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(false)`. 
+ Google Tracker | Importing the `com.google.android.gms.analytics.Tracker` class means that the app sends hits to Google Analytics. It is not necessarily sensitive information, but it is a first step towards Google Ads and hence this practice should be discouraged at early stage. 
+  Hidden Tracker Risk | An empirical evidence is that the more a project imports third party libraries, the more likely it is that there are hidden trackers. This requires to check the number of non-official dependencies throughtout the directives `implementation` or `api` in the `build.gradle` file. A non-official dependency refers to a package beyond the scope of `android.*`, `androidx.*` and to a lesser extent, `com.android.*` and `com.google.*`. 
+ Tracking Id | For some use cases, it might be necessary to get a unique device identifier by a call to `TelephonyManager#getDeviceId()` (returns IMEI on GSM, MEID for CDMA). However, this raises privacy concerns and it is not recommended. Alternatively, you may use `android.provider.Settings.Secure.ANDROID_ID`.
+ Explain Permission | Users are increasingly suspicious about the permissions requested by an app. A good practice is to test if `ActivityCompat#shouldShowRequestPermissionRationale()` returns `True`, so you can show an educational UI to the user. In this UI, describe why the feature, which the user wants to enable, needs a particular permission.
+*GDPR*
+ Google consent | To support publishers in meeting their duties under the EU User Consent Policy, Google offers a Consent SDK. Hence, importing classes from `com.google.android.ads.consent` is considered as a good practice.
+*Inclusion*
+ Aging devices | The `minSdkVersion` set in the `build.gradle` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices. 
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and licensed under [CC BY-NC-ND 4.0](LICENSE.md)
