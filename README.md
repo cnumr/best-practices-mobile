@@ -71,5 +71,9 @@ problem, or that there might be a better way of writing the code. Therefore, the
 *Inclusion*
  Aging devices | The `minSdkVersion` set in the `build.gradle` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices. 
 
+# iOS Platform
+
+🚧 Under Construction...
+
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
