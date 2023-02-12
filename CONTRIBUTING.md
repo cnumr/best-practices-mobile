@@ -10,7 +10,7 @@ If you can think of a eco-friendly practice that can be useful to many people, o
 
 ## Report a Best Practice
 
-If you notice something wrong with an existing practice, open an `Issue`. Please tag your issue with `android` or  `iOS`, as appropriate. The title of your issue must refer to the practice conerned as follows: *category-name* (e.g. *Environmental-Charge Awareness*, or *Social-Google consent*)
+If you notice something wrong with an existing practice, open an `Issue`. Please tag your issue with `android` or  `iOS`, as appropriate. The title of your issue must refer to the practice concerned as follows: *category-name* (e.g. *Environmental-Charge Awareness*, or *Social-Google consent*)
 
 ## Validation of a Practice
 
