@@ -14,4 +14,4 @@ If you notice something wrong with an existing practice, open an `Issue`. Please
 
 ## Validation of a Practice
 
-As things stand, best practices mainly rely on common-sense and consensus. Optimally, each new practice should be accompanied by a proof of its impact on sustainability. At this stage we suggest [PowDroid](https://gitlab.com/powdroid), a lightweight tool to measure energy consumption of apps running on android-powered devices.
+As things stand, best practices mainly rely on common-sense and consensus. Optimally, each new practice should be accompanied by a proof-of-impact on sustainability. At this stage we suggest [PowDroid](https://gitlab.com/powdroid), a lightweight tool to measure energy consumption of apps running on android-powered devices.
