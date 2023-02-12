@@ -73,7 +73,10 @@ problem, or that there might be a better way of writing the code. Therefore, the
 
 # iOS Platform
 
-🚧 Under Construction...
+ Name | Detailed Description
+---|---
+ *Power* |  
+ Save Mode Awareness | Use device API to check if low power mode is enabled, and adapt resources usage accordingly. For example, you can reduce frequency of data update if low power mode is enabled. Your app can query the `ProcessInfo.processInfo.isLowPowerModeEnabled` property at any time to determine whether Low Power Mode is active. Your app can also register to receive notifications when the Low Power Mode state of a device changes.
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
