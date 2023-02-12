@@ -2,10 +2,12 @@
 
 Any mobile developer (Android or iOS) is invited to contribute to this guide of best practices, provided they follow the procedure.
 
-In the medium term, we are also interested in cross-platform technologies. 
-
 ## Submit New Best Practice
 
+Please tag your PR with `android` or  `iOS`, as appropriate.
+
 ## Report a problem
+
+Please tag your PR with `android` or  `iOS`, as appropriate.
 
 ## Evaluation
