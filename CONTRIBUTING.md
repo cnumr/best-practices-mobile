@@ -6,7 +6,7 @@ As mobile platforms evolve very quickly, this guide requires contributions from 
 
 ## Submit a New Best Practice
 
-If you can think of a eco-friendly practice that can be useful to many people, open a `Pull Request`. Please tag your PR with `android` or  `iOS`, as appropriate. If possible, provide a *name* and a *detailed description* with clear references to elements of the APIs. Anyway, your PR will probably yield a fruitful discussion.
+If you can think of a eco-friendly practice that can be useful to many people, open a `Pull Request`. Please tag your PR with `android` or  `iOS`, as appropriate. If possible, provide a *short name* and a *detailed description* with clear references to elements of the APIs. Anyway, your PR will probably yield a fruitful discussion.
 
 ## Report a Best Practice
 
