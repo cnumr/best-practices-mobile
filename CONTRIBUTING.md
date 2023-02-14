@@ -1,6 +1,6 @@
 # Contribute to this mobile-specific guide
 
-Any mobile developer (Android or iOS) is invited to contribute to this guide of best practices, provided they follow the procedure.
+Any native mobile developer (Android or iOS) is invited to contribute to this guide of best practices, provided they follow the procedure.
 
 As mobile platforms evolve very quickly, this guide requires contributions from as many people as possible to stay up-to-date.
 
