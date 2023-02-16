@@ -6,7 +6,7 @@ As mobile platforms evolve very quickly, this guide requires contributions from 
 
 ## Submit a New Best Practice
 
-Ranging from fuzzy advices (e.g. *avoid too much videos*) to seemingly simple only (e.g. *avoid autoplay in videos*, *avoid infinite scroll*), finding best practices that are **statically detectable** is a real headache.
+Ranging from vague advices (e.g. *avoid too much videos*) to seemingly simple only (e.g. *avoid autoplay in videos*, *avoid infinite scroll*), finding best practices that are **statically detectable** is a real headache.
 
 But if you can think of a eco-friendly practice that can be useful to many people, open a `Pull Request`. Please tag your PR with `android` or  `iOS`, as appropriate. If possible, provide a *short name* and a *detailed description* with clear references to elements of the APIs. Anyway, your PR will probably yield a fruitful discussion.
 
