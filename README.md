@@ -73,7 +73,12 @@ problem, or that there might be a better way of writing the code. Therefore, the
 
 # iOS Platform
 
-🚧 Under Construction...
+## 🌿 Environmental Code Smells
+ Name | Detailed Description
+---|---
+ *Power* |  
+Charge Awareness | It's always good that an app has different behavior when device is connected/disconnected to a power station, or has different battery levels. Your app can query the `UIDevice#batteryLevel` and `UIDevice#batteryState` properties at any time to determine the level of charge and the state of the battery.
+Your app can also register to receive notifications when the battery level or state changes, using `batteryLevelDidChangeNotification` and `batteryStateDidChangeNotification`.
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
