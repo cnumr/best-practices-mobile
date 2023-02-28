@@ -73,7 +73,11 @@ problem, or that there might be a better way of writing the code. Therefore, the
 
 # iOS Platform
 
-🚧 Under Construction...
+## 🌿 Environmental Code Smells
+ Name | Detailed Description
+---|---
+ *Idleness* |  
+Rigid Alarm | Setting a tolerance for timers will allow them to fire later than the scheduled fire date. The system will use this flexibility to shift the execution of timers by small amounts of time, within their tolerances, increasing the ability to optimize power savings. Your app can set the `Timer#tolerance` property to specify a tolerance for a timer. Using this approach dramatically increases the amount of time that the processor spends idling while users detect no change in system responsiveness. 
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
