@@ -73,7 +73,11 @@ problem, or that there might be a better way of writing the code. Therefore, the
 
 # iOS Platform
 
-🚧 Under Construction...
+## 🌿 Environmental Code Smells
+ Name | Detailed Description
+---|---
+ *Sobriety* |  
+Disabled Dark Mode | Dark Mode was introduced in iOS 13. It allows the user to switch its system to a dark mode and the apps inherits it automatically by default. Yet is possible to overrides it to light mode by setting the value `Light` for the key `UIUserInterfaceStyle` in the Information Property List. This should be avoided since displaying dark colors has a significant impact on energy consumption for mobile devices with OLED screens.
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
