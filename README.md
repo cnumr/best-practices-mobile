@@ -73,7 +73,11 @@ problem, or that there might be a better way of writing the code. Therefore, the
 
 # iOS Platform
 
-🚧 Under Construction...
+## 🌿 Environmental Code Smells
+ Name | Detailed Description
+---|---
+ *Sobriety* |  
+Motion Sensor Update Rate | Using the Core Motion API, your app can receive continuous motion updates in the form of accelerometer, gyroscope, and device motion (rotation, acceleration, and more) events. Yet you don't often need these updates as soon as they are generated. Before registering to receive these recurring motion updates, you can specify an interval that meets your app’s needs, using `CMMotionManager#accelerometerUpdateInterval`, `CMMotionManager#gyroUpdateInterval`, `CMMotionManager#deviceMotionUpdateInterval` and `CMMotionManager#magnetometerUpdateInterval` properties. The larger the interval, the fewer events are delivered to your app, improving battery life.
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
