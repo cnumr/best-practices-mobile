@@ -73,7 +73,11 @@ problem, or that there might be a better way of writing the code. Therefore, the
 
 # iOS Platform
 
-🚧 Under Construction...
+## 🌿 Environmental Code Smells
+ Name | Detailed Description
+---|---
+ *Sobriety* |  
+ Disabled Location Updates Pause | Allowing the system to pause location updates, at times when the location data is unlikely to change, can improve battery life without sacrificing location data. This is the default behavior. For example, if the user stops for food while using a navigation app, the location manager might pause updates for a period of time. It is possible to disable this behavior, by setting the `CLLocationManager#pausesLocationUpdatesAutomatically` property to `false`, but applications are strongly discouraged of doing it.
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
