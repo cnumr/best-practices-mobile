@@ -73,7 +73,11 @@ problem, or that there might be a better way of writing the code. Therefore, the
 
 # iOS Platform
 
-🚧 Under Construction...
+## 🌿 Environmental Code Smells
+ Name | Detailed Description
+---|---
+ *Sobriety* |  
+ Thrifty Geolocation | Location awareness is one of the most popular features used by apps. By default standard location updates run with the best accuracy level, but unless your app really needs to know the user’s position within a few meters, this level of accuracy isn't needed. Requesting higher accuracy than you need causes the system to power up additional hardware and waste power for unnecessary precision. You can specify a degree of accuracy by setting the `CLLocationManager#desiredAccuracy` property. Also, setting the `CLLocationManager#activityType` property will let the system knows what type of location activity your app is performing and helps it determine the most appropriate time to perform location updates. Finally, if your app just needs a quick fix on the user’s location, it’s best to call the `CLLocationManager#requestLocation` method, that will deliver a single location update.
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
