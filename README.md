@@ -77,6 +77,8 @@ problem, or that there might be a better way of writing the code. Therefore, the
 ## 🌿 Environmental Code Smells
  Name | Detailed Description
 ---|---
+ *Sobriety* |  
+Disabled Dark Mode | Dark Mode was introduced in iOS 13. It allows the user to switch its system to a dark mode and the apps inherits it automatically by default. Yet is possible to overrides it to light mode by setting the value `Light` for the key `UIUserInterfaceStyle` in the Information Property List. This should be avoided since displaying dark colors has a significant impact on energy consumption for mobile devices with OLED screens.
  *Idleness* |  
 Rigid Alarm | Setting a tolerance for timers will allow them to fire later than the scheduled fire date. The system will use this flexibility to shift the execution of timers by small amounts of time, within their tolerances, increasing the ability to optimize power savings. Your app can set the `Timer#tolerance` property to specify a tolerance for a timer. Using this approach dramatically increases the amount of time that the processor spends idling while users detect no change in system responsiveness. 
  *Power* |  
