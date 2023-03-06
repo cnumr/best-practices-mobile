@@ -77,13 +77,12 @@ problem, or that there might be a better way of writing the code. Therefore, the
 ## 🌿 Environmental Code Smells
  Name | Detailed Description
 ---|---
- *Sobriety* |  
-Disabled Dark Mode | Dark Mode was introduced in iOS 13. It allows the user to switch its system to a dark mode and the apps inherits it automatically by default. Yet is possible to overrides it to light mode by setting the value `Light` for the key `UIUserInterfaceStyle` in the Information Property List. This should be avoided since displaying dark colors has a significant impact on energy consumption for mobile devices with OLED screens.
  *Idleness* |  
 Rigid Alarm | Setting a tolerance for timers will allow them to fire later than the scheduled fire date. The system will use this flexibility to shift the execution of timers by small amounts of time, within their tolerances, increasing the ability to optimize power savings. Your app can set the `Timer#tolerance` property to specify a tolerance for a timer. Using this approach dramatically increases the amount of time that the processor spends idling while users detect no change in system responsiveness. 
  *Power* |  
 Charge Awareness | It's always good that an app has different behavior when device is connected/disconnected to a power station, or has different battery levels. Your app can query the `UIDevice#batteryLevel` and `UIDevice#batteryState` properties at any time to determine the level of charge and the state of the battery. Your app can also register to receive notifications when the battery level or state changes, using `batteryLevelDidChangeNotification` and `batteryStateDidChangeNotification`.
  *Sobriety* |  
+Disabled Dark Mode | Dark Mode was introduced in iOS 13. It allows the user to switch its system to a dark mode and the apps inherits it automatically by default. Yet is possible to overrides it to light mode by setting the value `Light` for the key `UIUserInterfaceStyle` in the Information Property List. This should be avoided since displaying dark colors has a significant impact on energy consumption for mobile devices with OLED screens.
 Brightness Override | The adaptive brightness feature raises or lower the brightness of the screen depending on the light in the current environment. For some reasons, developpers may disable, temporarely, this feature programmatically, by setting the field `UIScreen.main.brightness` with a custom value. This intelligent feature was introduced to improve battery life. Its deactivation is a very bad idea, unless you absolutely need it (eg: to display a QRCode).
 Torch-free | Turning on the torch mode programmatically with `AVCaptureDevice#torchMode` or `AVCaptureDevice#setTorchModeOn(level:)` must absolutely be avoided because the flashlight is one of the most energy-intensive component.
  *Power* |  
