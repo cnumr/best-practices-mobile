@@ -78,8 +78,7 @@ problem, or that there might be a better way of writing the code. Therefore, the
  Name | Detailed Description
 ---|---
  *Power* |  
-Charge Awareness | It's always good that an app has different behavior when device is connected/disconnected to a power station, or has different battery levels. Your app can query the `UIDevice#batteryLevel` and `UIDevice#batteryState` properties at any time to determine the level of charge and the state of the battery.
-Your app can also register to receive notifications when the battery level or state changes, using `batteryLevelDidChangeNotification` and `batteryStateDidChangeNotification`.
+Charge Awareness | It's always good that an app has different behavior when device is connected/disconnected to a power station, or has different battery levels. Your app can query the `UIDevice#batteryLevel` and `UIDevice#batteryState` properties at any time to determine the level of charge and the state of the battery. Your app can also register to receive notifications when the battery level or state changes, using `batteryLevelDidChangeNotification` and `batteryStateDidChangeNotification`.
  *Sobriety* |  
 Brightness Override | The adaptive brightness feature raises or lower the brightness of the screen depending on the light in the current environment. For some reasons, developpers may disable, temporarely, this feature programmatically, by setting the field `UIScreen.main.brightness` with a custom value. This intelligent feature was introduced to improve battery life. Its deactivation is a very bad idea, unless you absolutely need it (eg: to display a QRCode).
 Torch-free | Turning on the torch mode programmatically with `AVCaptureDevice#torchMode` or `AVCaptureDevice#setTorchModeOn(level:)` must absolutely be avoided because the flashlight is one of the most energy-intensive component.
