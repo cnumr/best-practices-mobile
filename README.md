@@ -71,17 +71,17 @@ problem, or that there might be a better way of writing the code. Therefore, the
 *Inclusion*
  Aging devices | The `minSdkVersion` set in the `build.gradle` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices. 
 
+=======
 # iOS Platform
-
 
 ## 🌿 Environmental Code Smells
  Name | Detailed Description
 ---|---
  *Sobriety* |  
+Brightness Override | The adaptive brightness feature raises or lower the brightness of the screen depending on the light in the current environment. For some reasons, developpers may disable, temporarely, this feature programmatically, by setting the field `UIScreen.main.brightness` with a custom value. This intelligent feature was introduced to improve battery life. Its deactivation is a very bad idea, unless you absolutely need it (eg: to display a QRCode).
 Torch-free | Turning on the torch mode programmatically with `AVCaptureDevice#torchMode` or `AVCaptureDevice#setTorchModeOn(level:)` must absolutely be avoided because the flashlight is one of the most energy-intensive component.
  *Power* |  
  Save Mode Awareness | Use device API to check if low power mode is enabled, and adapt resources usage accordingly. For example, you can reduce frequency of data update if low power mode is enabled. Your app can query the `ProcessInfo.processInfo.isLowPowerModeEnabled` property at any time to determine whether Low Power Mode is active. Your app can also register to receive notifications when the Low Power Mode state of a device changes, using `NSProcessInfoPowerStateDidChange`.
-
 
 # Licence
 This guide is part of the work of [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
