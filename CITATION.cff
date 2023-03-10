@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this guide, please cite it as below."
+authors:
+- family-names: "Le Goaër"
+  given-names: "Olivier"
+  orcid: "https://orcid.org/0000-0001-5405-1688"
+title: "Mobile-specific Best Practices for Sustainable Software"
+version: 1.5.0
+date-released: 2023-03-10
+url: "https://github.com/cnumr/best-practices-mobile"
