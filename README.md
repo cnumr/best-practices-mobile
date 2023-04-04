@@ -71,7 +71,8 @@ problem, or that there might be a better way of writing the code. Therefore, the
 *GDPR*
  Google consent | To support publishers in meeting their duties under the EU User Consent Policy, Google offers a Consent SDK. Hence, importing classes from `com.google.android.ads.consent` is considered as a good practice.
 *Inclusion*
- Aging devices | The `minSdkVersion` set in the `build.gradle` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices. 
+ Aging devices | The `minSdkVersion` set in the `build.gradle` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices.
+ Grammatical gender | With Android 14, `Grammatical Inflection API` provides a more personalized experience for users. Among available inflections, grammatical gender is the most salient. Basically, this can be checked with the presence of the `values-?-feminine/`, `values-?-masculine/` and `values-?-neuter/` directories.
 
 
 # ![](assets/ios-logo.png) iOS Platform
