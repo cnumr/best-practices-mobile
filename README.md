@@ -53,13 +53,13 @@ problem, or that there might be a better way of writing the code. Therefore, the
  Supported Version Range | When looking at the `minSdkVersion` and `targetSdkVersion` attributes for the `<uses-sdk>` in the `AndroidManifest.xml` file, the amplitude of supported platform versions should not be too wide, at the risk of making the app too heavy to handle all cases. It is worth notice that this smell may contradicts with the Aging devices social smell. Pleace notice that in newer versions of Android, corresponding xml properties was replaced by Gradle properties in `build.gradle` file. 
  Same dependencies | This occurs when equivalent libraries are incorporated into the app. If they do quite the same things, choose only one. This can be checked in the dependencies section of `build.gradle` along with a human-curated list of equivalent libraries for Android (e.g., Volley&asymp;Retrofit&asymp;okHttp&asymp;android-async-http). 
  Duplicate dependencies | This occurs when several versions of the same library are incorporated into the app. The weight of the app is fatally increased without changing the features. This can be checked in the dependencies section of `build.gradle`. 
- Fat app | When an app exceeds the limit of 65 536 method references, the configuration multidex must be enabled with `multiDexEnabled true` in the `defaultConfig` section of `build.gradle`. Switching to that configuration of multiple dex files  goes against the overall reduction of the weight of the apps and hence must be avoided.		 
  Convert to WebP | WebP is an image format developed by Google, presenting smaller yet more visually-pleasing pictures. Typically, WebP compresses images by an average of 30 percent more than JPEG with no loss in quality. From Android 4.0 (API level 14) and higher, using this image format instead of .gif, .png or .jpeg in the `/res` folder is a good practice since it allows to decrease the size of apks. Notice that Android Studio allows you to easily convert images to the WebP format. 
  Clear cache | A good (but quite rare) practice in the long term is to delete the whole cache directory of the app onto the target device. This requires the source code of the app to contains at least one call to the method `Context.cacheDir#deleteRecursively()`. 
  Shrink Resources | For those that are still not publishing with the Android App Bundle format, it is possible to minimize the app's size via the `build.gradle` file, by using the following lines. Especially useful for popular apps, it reduces the amount of downloaded data required for installation and updating, across millions of devices. Check `buildTypes { release { shrinkResources true } }` 
  Disable Obfuscation | The Proguard tool secure the app for production, including shrinking, code optimization and obfuscation. However, obfuscated code will have a sligthly negative impact on power consumption at runtime. To disable it, in `build.gradle`, replace the setting `minifyEnabled true` by this custom rule: `postprocessing { obfuscate false }` 
  *Obsolescence* |  
- 
+  Aging devices | The `minSdkVersion` set in the `build.gradle` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices.
+   Fat app | When an app exceeds the limit of 65 536 method references, the configuration multidex must be enabled with `multiDexEnabled true` in the `defaultConfig` section of `build.gradle`. Software obesity push end-users to change their device model.		 
  
 ## Social Code Smells
  Name | Detailed Description
@@ -73,7 +73,6 @@ problem, or that there might be a better way of writing the code. Therefore, the
 *GDPR*
  Google consent | To support publishers in meeting their duties under the EU User Consent Policy, Google offers a Consent SDK. Hence, importing classes from `com.google.android.ads.consent` is considered as a good practice.
 *Inclusion*
- Aging devices | The `minSdkVersion` set in the `build.gradle` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices.
  Grammatical gender | With Android 14, `Grammatical Inflection API` provides a more personalized experience for users. Among available inflections, grammatical gender is the most salient. Basically, this can be checked with the presence of the `values-?-feminine/`, `values-?-masculine/` and `values-?-neuter/` directories.
 
 
