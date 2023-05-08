@@ -58,7 +58,9 @@ problem, or that there might be a better way of writing the code. Therefore, the
  Clear cache | A good (but quite rare) practice in the long term is to delete the whole cache directory of the app onto the target device. This requires the source code of the app to contains at least one call to the method `Context.cacheDir#deleteRecursively()`. 
  Shrink Resources | For those that are still not publishing with the Android App Bundle format, it is possible to minimize the app's size via the `build.gradle` file, by using the following lines. Especially useful for popular apps, it reduces the amount of downloaded data required for installation and updating, across millions of devices. Check `buildTypes { release { shrinkResources true } }` 
  Disable Obfuscation | The Proguard tool secure the app for production, including shrinking, code optimization and obfuscation. However, obfuscated code will have a sligthly negative impact on power consumption at runtime. To disable it, in `build.gradle`, replace the setting `minifyEnabled true` by this custom rule: `postprocessing { obfuscate false }` 
-
+ *Obsolescence* |  
+ 
+ 
 ## Social Code Smells
  Name | Detailed Description
 ---|---
