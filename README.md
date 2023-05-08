@@ -57,7 +57,7 @@ problem, or that there might be a better way of writing the code. Therefore, the
  Clear cache | A good (but quite rare) practice in the long term is to delete the whole cache directory of the app onto the target device. This requires the source code of the app to contains at least one call to the method `Context.cacheDir#deleteRecursively()`. 
  Shrink Resources | For those that are still not publishing with the Android App Bundle format, it is possible to minimize the app's size via the `build.gradle` file, by using the following lines. Especially useful for popular apps, it reduces the amount of downloaded data required for installation and updating, across millions of devices. Check `buildTypes { release { shrinkResources true } }` 
  Disable Obfuscation | The Proguard tool secure the app for production, including shrinking, code optimization and obfuscation. However, obfuscated code will have a sligthly negative impact on power consumption at runtime. To disable it, in `build.gradle`, replace the setting `minifyEnabled true` by this custom rule: `postprocessing { obfuscate false }` 
- *Obsolescence* |  
+ *Sustainability* |  
   Aging devices | The `minSdkVersion` set in the `build.gradle` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices.
    Fat app | When an app exceeds the limit of 65 536 method references, the configuration multidex must be enabled with `multiDexEnabled true` in the `defaultConfig` section of `build.gradle`. Fat apps do not install on space-limited devices.	 
  
