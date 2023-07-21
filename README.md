@@ -99,4 +99,4 @@ Torch-free | Turning on the torch mode programmatically with `AVCaptureDevice#to
 
 
 # Licence
-This guide is maintained by [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and protected by [CC BY-NC-ND 4.0](LICENSE.md)
+This guide is maintained by [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and is protected by [CC BY-NC-ND 4.0](LICENSE.md)
