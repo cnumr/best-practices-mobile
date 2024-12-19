@@ -8,7 +8,7 @@ problem, or that there might be a better way of writing the code. Therefore, the
 ## Environmental Code Smells
  Name | Detailed Description
 ---|---
- *Optimized API* |  
+ *Substitution* |  
  Fused Location | The fused location provider is one of the location APIs in Google Play services which combines signals from GPS, Wi-Fi, and cell networks, as well as accelerometer, gyroscope, magnetometer and other sensors. It is officially recommended to maximize battery life. Thus, developer has to set up Google Play Service in her gradle file with a dependency to `com.google.android.gms:play-services-location:x.y.z`, and then to import from `com.google.android.gms.location` instead of the `android.location` package of the SDK. 
  Bluetooth Low-Energy | In contrast to classic Bluetooth, Bluetooth Low Energy (BLE) is designed to provide significantly lower power consumption. Its purpose is to save energy on both paired devices but very few developers are aware of this alternative API. From the Android client side, it means append `android.bluetooth.le.*` imports to `android.bluetooth.*` imports in order to benefits from low-energy features.
  Lazy Loading | When displaying scrollable data on screen, the new Jetpack Compose API introduced lazy views instead of `ListView`, `GridView` and even `RecycleView`. These components use the technique of lazy loading, which consists of loading data only when it arrives at the display area. Import `androidx.compose.foundation.lazy.*` to benefit from objects like `LazyColumn`, `LazyRow`, `LazyVerticalGrid` or `LazyHorizontalGrid`.
