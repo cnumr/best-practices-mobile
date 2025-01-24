@@ -1,6 +1,6 @@
 # Mobile-specific Best Practices
 
-This guide is aimed at mobile platform developers who want to make their native applications more sustainable, both environmentally and socially. Unlike general rules of thumb, this guide focuses on code smells, i.e. surface symptoms that suggest there might be a problem, or that there might be a better way to write the code. As such, these low-level best practices have the great advantage of being detectable by program analysis tools, such as SonarQube plugins: [Android plugin](https://github.com/green-code-initiative/ecoCode-android) | [iOS plugin](https://github.com/green-code-initiative/creedengo-ios)
+This guide is aimed at mobile platform developers who want to make their native applications more sustainable, both environmentally and socially. Unlike general rules of thumb, this guide focuses on code smells, i.e. surface symptoms that suggest there might be a problem, or that there might be a better way to write the code. As such, these low-level best practices have the great advantage of being detectable by program analysis tools, like the following SonarQube extensions: [Android plugin](https://github.com/green-code-initiative/ecoCode-android) | [iOS plugin](https://github.com/green-code-initiative/creedengo-ios)
 
 #  ![](assets/android-logo.png) Android Platform
 
