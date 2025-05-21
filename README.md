@@ -100,8 +100,9 @@ Disabled Dark Mode | Dark Mode was introduced in iOS 13. It allows the user to s
 Brightness Override | The adaptive brightness feature raises or lower the brightness of the screen depending on the light in the current environment. For some reasons, developpers may disable, temporarily, this feature programmatically, by setting the field `UIScreen.main.brightness` with a custom value. This intelligent feature was introduced to improve battery life. Its deactivation is a very bad idea, unless you absolutely need it (eg: to display a QRCode).
 Vibration-free | Shaking or vibrating an iOS device is possible using `UIFeedbackGenerator`. Behind this effect stands a specific hardware component, the Haptic Engine, which consumes power. As a consequence, its usage should be carefully considered, especially if its added value is not clear.
 Torch-free | Turning on the torch mode programmatically with `AVCaptureDevice#torchMode` or `AVCaptureDevice#setTorchModeOn(level:)` must absolutely be avoided because the flashlight is one of the most energy-intensive component. 
-Animation-free | Animations play a crucial role in creating a dynamic and engaging user interface in iOS applications, however they must be avoided. Animations can be detected by checking the use of functions like `withAnimation(::)`, the `animation(_:value:)` view modifier, and the binding’s `animation(_:)` method in SwiftUI, as well as checking the use of UIKit's animation methods.
-
+Extraneous Animation | Animations play a crucial role in creating a dynamic and engaging user interface in iOS applications, however they must be avoided. Animations can be detected by checking the use of functions like `withAnimation(::)`, the `animation(_:value:)` view modifier, and the binding’s `animation(_:)` method in SwiftUI, as well as checking the use of UIKit's animation methods.
+ *Longevity* | 
+ Aging devices | The `IPHONEOS_DEPLOYMENT_TARGET` set in the `project.pbxproj` file determines which APIs are available at build time, and determines the minimum version of the OS that the code will be compatible with. The lower the better so as not to exclude owners of older devices.
 
 # Licence
-This guide is maintained by [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and is protected by [CC BY-NC-ND 4.0](LICENSE.md)
+This guide is maintained with ❤️ by [Dr. Olivier Le Goaër](https://olegoaer.perso.univ-pau.fr/) and is protected by [CC BY-NC-ND 4.0](LICENSE.md)
